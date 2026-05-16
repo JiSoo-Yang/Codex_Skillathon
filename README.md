@@ -17,7 +17,17 @@
 
 현재 버전은 문서만 있는 스킬이 아니라, **직접 실행해볼 수 있는 데모 스킬** 형태로 구성되어 있습니다.
 
-![Running Crew Match overview](running-crew-match/assets/readme-overview.svg)
+```mermaid
+flowchart LR
+    A["입력: 지역"] --> D["running-crew-match"]
+    B["입력: 요일/시간"] --> D
+    C["입력: 수준/목표/추가 조건"] --> D
+    D --> E["로컬 데모 매처"]
+    E --> F["러닝 크루 후보 추천"]
+    E --> G["추천 이유와 적합성 설명"]
+    E --> H["출처와 데모 데이터 메모"]
+    E -. "확장 단계" .-> I["배포 API 모드"]
+```
 
 `running-crew-match`가 입력 조건을 받아 추천 결과를 만드는 흐름을 한눈에 보여주는 다이어그램입니다.
 
