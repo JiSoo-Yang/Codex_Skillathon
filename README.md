@@ -1,52 +1,53 @@
 # Skillathon
 
-This repository was prepared for the **May 16, 2026** event **"비개발자도 할 수 있는 AI 업무 자동화 MeetUp&Skillathon"**.
+이 저장소는 **2026년 5월 16일** 행사 **"비개발자도 할 수 있는 AI 업무 자동화 MeetUp&Skillathon"** 을 바탕으로 준비한 프로젝트입니다.
 
-The meetup focused on practical AI automation for non-developers, Codex-based skill building, and hands-on experimentation with stronger agent workflows such as OpenClaw and NVIDIA NemoClaw. This project is my working skillathon submission and practice repository built in that context.
+이번 밋업은 비개발자도 직접 시도해볼 수 있는 실용적인 AI 자동화, Codex 기반 스킬 제작, 그리고 OpenClaw·NVIDIA NemoClaw 같은 더 강력한 에이전트 워크플로우를 경험하는 데 초점이 있었습니다. 이 저장소는 그런 맥락에서 만든 개인 Skillathon 작업 저장소이자 제출용 데모 프로젝트입니다.
 
-## What this project is about
+## 프로젝트 소개
 
-The main project in this repository is `running-crew-match`, a demo skill that recommends Korean running crews based on:
+이 저장소의 핵심 프로젝트는 `running-crew-match` 입니다.  
+이 스킬은 아래 조건을 바탕으로 한국의 러닝 크루 후보를 추천하는 데모 스킬입니다.
 
-- area
-- preferred day and time
-- running level
-- running goal
-- extra preferences such as small groups or women-friendly 분위기
+- 지역
+- 선호 요일과 시간대
+- 러닝 수준
+- 러닝 목표
+- 소규모 선호, 여성 친화 분위기 같은 추가 조건
 
-The current version is designed as an **executable demo skill**, not just a documentation-only skill.
+현재 버전은 문서만 있는 스킬이 아니라, **직접 실행해볼 수 있는 데모 스킬** 형태로 구성되어 있습니다.
 
-## What is included
+## 포함된 구성
 
 - `running-crew-match/SKILL.md`
-  The main skill definition and operating rules.
+  스킬 정의와 동작 규칙이 담긴 핵심 문서
 - `running-crew-match/assets/demo_crews.json`
-  Bundled demo dataset for offline matching tests.
+  오프라인 테스트용 데모 러닝 크루 데이터
 - `running-crew-match/scripts/match_running_crews.py`
-  Local CLI entrypoint for testing the skill quickly.
+  빠르게 실행해볼 수 있는 로컬 CLI 진입점
 - `running-crew-match/scripts/dev_server.py`
-  Local HTTP API server for demo or deployment.
+  데모 및 배포용 로컬 HTTP API 서버
 - `running-crew-match/references/usage-guide.md`
-  Step-by-step guide for running the skill.
+  실행 방법을 단계별로 설명한 가이드 문서
 - `running-crew-match/references/api-contract.md`
-  Request and response contract for the demo API.
+  데모 API의 요청/응답 형식을 정리한 문서
 - `running-crew-match/references/test-scenarios.md`
-  Example prompts and expected behavior checks.
+  예시 프롬프트와 기대 동작을 정리한 테스트 시나리오
 
-## Why this repo fits the event
+## 이 저장소가 행사와 맞는 이유
 
-This repository is meant to show how a skill can evolve:
+이 프로젝트는 하나의 스킬이 어떻게 확장될 수 있는지를 보여주기 위해 구성했습니다.
 
-1. from a simple `SKILL.md`
-2. into a testable local CLI workflow
-3. into a deployable API-backed demo
-4. and eventually into a stronger automation flow connected to broader agent systems
+1. 단순한 `SKILL.md` 문서형 스킬에서 시작하고
+2. 로컬에서 테스트 가능한 CLI 흐름으로 확장하고
+3. 배포 가능한 API 기반 데모로 발전시키고
+4. 이후 더 넓은 에이전트 자동화 흐름으로 연결할 수 있게 만드는 방향입니다
 
-That direction matches the event theme of making AI automation approachable and practical, even for people who are not full-time developers.
+이 흐름은 비개발자에게도 AI 자동화를 더 실용적이고 접근 가능하게 만든다는 이번 행사 주제와 잘 맞습니다.
 
-## Quick start
+## 빠른 실행
 
-Run the local matcher:
+로컬 매처 실행:
 
 ```bash
 cd /Users/jisu/Desktop/Skillathon/running-crew-match
@@ -61,13 +62,13 @@ python3 scripts/match_running_crews.py \
   --json
 ```
 
-Run the local API server:
+로컬 API 서버 실행:
 
 ```bash
 cd /Users/jisu/Desktop/Skillathon/running-crew-match
 python3 scripts/dev_server.py --host 127.0.0.1 --port 8000
 ```
 
-For the full run guide, see:
+더 자세한 실행 방법은 아래 문서를 참고하면 됩니다.
 
 - `running-crew-match/references/usage-guide.md`
