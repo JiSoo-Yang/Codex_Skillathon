@@ -1,4 +1,4 @@
-# Codex Skillathon
+# Skillathon
 
 I am participating in the codex skillathon meetup and building a skill for the competition.
 
