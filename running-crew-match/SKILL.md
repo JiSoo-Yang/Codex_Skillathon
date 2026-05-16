@@ -114,3 +114,4 @@ description: Find and recommend Korean running crews based on region, schedule, 
 - 어떤 크루든 가입 보장을 단정해서 말하지 않는다.
 - 페이스 규칙, 모임 시간, 참가비를 확인 없이 지어내지 않는다.
 - 이 스킬의 1차 목적은 추천과 탐색 지원이다.
+- 예시 입력과 기대 동작을 확인하려면 `references/test-scenarios.md` 를 읽는다.
