@@ -23,6 +23,7 @@ description: Use this skill to recommend Korean running crews by area, schedule,
 - "잠실에서 하프 준비하는 사람들 많은 크루 있을까?"
 - "한강 근처 아침 러닝 모임 후보 알려줘"
 - "러닝 크루 매칭 API 데모를 돌려봐"
+- "이거 실행 어떻게 해보는거야?"
 
 ## When not to use
 
@@ -42,6 +43,17 @@ description: Use this skill to recommend Korean running crews by area, schedule,
 - `limit`: 반환 후보 수. 기본값은 5 이하로 유지한다.
 
 핵심 정보가 빠졌다면 추천 품질에 가장 큰 영향을 주는 항목만 최소한으로 확인한다.
+
+## If the user asks how to run this skill
+
+사용자가 실행 방법, 테스트 방법, 배포 방법을 물으면 `references/usage-guide.md` 를 먼저 읽고, 그 안의 단계별 명령어를 바탕으로 안내한다.
+
+가능하면 아래 순서로 설명한다.
+
+- 로컬 CLI 실행
+- 로컬 API 서버 실행
+- `curl` 로 API 호출
+- Brev 배포 후 `RUNNING_CREW_MATCH_API_BASE_URL` 연결
 
 ## Preferred execution order
 
@@ -113,6 +125,7 @@ python3 scripts/match_running_crews.py \
 
 ## Resources
 
+- 실행 가이드: `references/usage-guide.md`
 - API 요청과 응답 형식: `references/api-contract.md`
 - 예시 입력과 기대 동작: `references/test-scenarios.md`
 - 로컬 배포 힌트: `references/deploying-demo-api.md`
