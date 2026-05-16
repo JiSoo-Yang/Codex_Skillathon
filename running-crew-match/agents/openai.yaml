@@ -1,0 +1,4 @@
+interface:
+  display_name: "Running Crew Match"
+  short_description: "Recommend Korean running crews by area and schedule"
+  default_prompt: "Use $running-crew-match to recommend Korean running crews that fit my area, schedule, and running goal."
